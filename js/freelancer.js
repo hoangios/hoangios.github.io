@@ -35,3 +35,24 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+$(document).ready(function() {
+/*** Quotes-Slider ***/
+	$('.flexslider').flexslider({
+        animation: "slide",
+        touch: true,
+        slideshow: true,
+		slideshowSpeed: 5000,        
+		animationSpeed: 2000,
+		controlNav: false,
+		directionNav: false,
+     });
+});
+
+/*progress-bar*/
+$(document).ready(function(){
+	$('.skillbar').each(function(){
+		$(this).find('.skillbar-bar').animate({
+			width:$(this).attr('data-percent')
+		},6000);
+	});
+});
